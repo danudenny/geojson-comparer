@@ -355,23 +355,3 @@ if geojson_data1 is not None or geojson_data2 is not None:
             except Exception as e:
                 st.error(f"Error visualizing GeoJSON: {str(e)}")
                 st.write("Could not visualize the GeoJSON files, but analysis is still available above.")
-
-# Add information about running the app
-st.divider()
-st.subheader("How to Use This App")
-st.write("""
-1. Upload two GeoJSON files using the upload buttons above
-2. Or check the "Use sample data" options to see example GeoJSON data
-3. The app will validate and analyze each file
-4. When two files are provided, the app will compare their structures
-""")
-
-st.subheader("Required Dependencies")
-st.code("""
-pip install streamlit pandas geopandas jsonschema
-""")
-
-st.subheader("Run the App")
-st.code("""
-streamlit run app.py
-""")
